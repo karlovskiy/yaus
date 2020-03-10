@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Yaus Yet Another URL Shortener">
+    <meta name="author" content="Karlovskiy Alexey">
+    <title>Yaus</title>
+
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/yaus.css}" rel="stylesheet">
+</head>
+
+<header th:fragment="header" class="masthead mb-auto">
+    <div class="inner">
+        <h3 class="masthead-brand"><a th:href="@{/}" th:text="#{links.yaus}"></a></h3>
+        <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" th:href="@{http://github.com/karlovskiy}"
+               target="_blank" th:text="#{links.github}"></a>
+        </nav>
+    </div>
+</header>
+
+<footer th:fragment="footer" class="mastfoot mt-auto">
+    <div class="inner">
+        <p>Yet Another URL Shortener :: 2020</p>
+    </div>
+</footer>
+
+</html>

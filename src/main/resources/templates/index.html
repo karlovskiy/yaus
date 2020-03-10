@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="template :: head"></head>
+
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    <footer th:replace="template :: header"></footer>
+
+    <main role="main" class="inner cover">
+        <form action="#" th:action="@{/}" th:object="${shortenUrlAction}" method="post">
+            <div class="input-group mb-3">
+                <label class="sr-only" for="longURL" th:text="#{labels.longURL}"></label>
+                <input id="longURL" type="text" th:field="*{longURL}"
+                       th:class="|form-control ${#fields.hasErrors('longURL') ? 'is-invalid' : ''}|"
+                       th:placeholder="#{placeholders.longURL}">
+                <div class="input-group-append">
+                    <button id="button-shorten" class="btn btn-success" type="submit"
+                            th:text="#{buttons.shorten}"></button>
+                </div>
+                <div th:if="${#fields.hasErrors('longURL')}" th:errors="*{longURL}"
+                     class="invalid-feedback"></div>
+            </div>
+
+            <div th:if="${shortURL != null}" class="alert alert-success" role="alert"
+                 th:text="#{warnings.shortURLCreated}"></div>
+
+            <div class="form-group" th:if="${shortURL != null}">
+                <label class="sr-only" for="shortURL">Short URL</label>
+                <textarea id="shortURL" readonly class="form-control" th:text="${shortURL}" rows="1"></textarea>
+            </div>
+        </form>
+    </main>
+
+    <footer th:replace="template :: footer"></footer>
+</div>
+
+</body>
+</html>

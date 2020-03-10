@@ -1,0 +1,7 @@
+${AnsiColor.BRIGHT_GREEN}__   _____  _   _ _____
+${AnsiColor.BRIGHT_GREEN}\ \ / / _ \| | | /  ___|
+${AnsiColor.BRIGHT_GREEN} \ V / /_\ \ | | \ `--.
+${AnsiColor.BRIGHT_GREEN}  \ /|  _  | | | |`--. \
+${AnsiColor.BRIGHT_GREEN}  | || | | | |_| /\__/ /
+${AnsiColor.BRIGHT_GREEN}  \_/\_| |_/\___/\____/
+${AnsiColor.BRIGHT_YELLOW}${application.formatted-version}
